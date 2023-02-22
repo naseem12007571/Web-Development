@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script date and time </title>
+</head>
+<style>
+    .container{
+        font-size: 23px;
+        background-color: aquamarine;
+        border: 2p solid gray;
+        padding: 34px;
+        margin: 4px;
+        text-align: center;
+    }
+    #time{
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="container">
+        <span id="time"></span>
+    </div>
+</body>
+<script>
+    console.log("This is date and time tutorial");
+    let now = new Date();
+    console.log(now)
+
+    let newDate= new Date(2023,2,3,8,);
+    // console.log(newDate);
+
+    let yar = newDate.getFullYear();
+    console.log("the year is ", yar);
+
+    let dte = newDate.getDate();
+    console.log("the date is ", dte);
+
+    let mont = newDate.getMonth();
+    console.log("the month is ", mont);
+
+    let dy = newDate.getDay();
+    console.log("the day is ", dy);
+
+    let hou = newDate.getHours();
+    console.log("the hour is ",hou );
+
+    newDate.setDate(15);   //  we can change new date 
+    console.log(newDate);
+    newDate.setMonth(6); // we can change month
+    console.log(newDate);  
+
+    setInterval(upDateTime,1000);
+    function upDateTime(){
+        time.innerHTML = new Date();
+    }
+</script>
+</html>
